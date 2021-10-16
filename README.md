@@ -12,7 +12,7 @@ Connect the pins like this:
 | 3V | VCC |
 | D6 | RXD |
 | D7 | TXD |
-# What you need
+# What it does
 - Connects to wifi
 - Listens for command from MQTT server, then executes it
 # How to use
