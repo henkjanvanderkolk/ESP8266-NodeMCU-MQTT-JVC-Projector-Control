@@ -184,122 +184,122 @@ void MQTTcallback(char* topic, byte* payload, unsigned int length) {
 
   String message;
   for (int i = 0; i < length; i++) {
-    message = message + (char)payload[i];  //Conver *byte to String
+    message = message + (char)payload[i];  //Convert *byte to String
   }
    Serial.print(message);
-  if(message == "PowerOff") {RS232Out.write(PowerOff);}
-  if(message == "PowerOn") {RS232Out.write(PowerOn);}
-  if(message == "InputHDMI1") {RS232Out.write(InputHDMI1);}
-  if(message == "InputHDMI2") {RS232Out.write(InputHDMI2);}
-  if(message == "InputComponent") {RS232Out.write(InputComponent);}
-  if(message == "InputSVideo") {RS232Out.write(InputSVideo);}
-  if(message == "InputVideo") {RS232Out.write(InputVideo);}
-  if(message == "Inputplus") {RS232Out.write(Inputplus);}
-  if(message == "Inputmin") {RS232Out.write(Inputmin);}
-  if(message == "TestPatternOff") {RS232Out.write(TestPatternOff);}
-  if(message == "TestPatternColourBars") {RS232Out.write(TestPatternColourBars);}
-  if(message == "TestPatternStairstepblackandwhite") {RS232Out.write(TestPatternStairstepblackandwhite);}
-  if(message == "TestPatternStairstepred") {RS232Out.write(TestPatternStairstepred);}
-  if(message == "TestPatternStairstepgreen") {RS232Out.write(TestPatternStairstepgreen);}
-  if(message == "TestPatternStairstepblue") {RS232Out.write(TestPatternStairstepblue);}
-  if(message == "TestPatternCrosshatchgreen") {RS232Out.write(TestPatternCrosshatchgreen);}
-  if(message == "GammaNormal") {RS232Out.write(GammaNormal);}
-  if(message == "GammaA") {RS232Out.write(GammaA);}
-  if(message == "GammaB") {RS232Out.write(GammaB);}
-  if(message == "GammaC") {RS232Out.write(GammaC);}
-  if(message == "GammaCustom1") {RS232Out.write(GammaCustom1);}
-  if(message == "GammaCustom2") {RS232Out.write(GammaCustom2);}
-  if(message == "GammaCustom3") {RS232Out.write(GammaCustom3);}
-  if(message == "GammaCorrectionValue18") {RS232Out.write(GammaCorrectionValue18);}
-  if(message == "GammaCorrectionValue19") {RS232Out.write(GammaCorrectionValue19);}
-  if(message == "GammaCorrectionValue20") {RS232Out.write(GammaCorrectionValue20);}
-  if(message == "GammaCorrectionValue21") {RS232Out.write(GammaCorrectionValue21);}
-  if(message == "GammaCorrectionValue22Default") {RS232Out.write(GammaCorrectionValue22Default);}
-  if(message == "GammaCorrectionValue23") {RS232Out.write(GammaCorrectionValue23);}
-  if(message == "GammaCorrectionValue24") {RS232Out.write(GammaCorrectionValue24);}
-  if(message == "GammaCorrectionValue25") {RS232Out.write(GammaCorrectionValue25);}
-  if(message == "GammaCorrectionValue26") {RS232Out.write(GammaCorrectionValue26);}
-  if(message == "PictureModeCinema1") {RS232Out.write(PictureModeCinema1);}
-  if(message == "PictureModeCinema2") {RS232Out.write(PictureModeCinema2);}
-  if(message == "PictureModeCinema3") {RS232Out.write(PictureModeCinema3);}
-  if(message == "PictureModeNatural") {RS232Out.write(PictureModeNatural);}
-  if(message == "PictureModeStage") {RS232Out.write(PictureModeStage);}
-  if(message == "PictureModeDynamic") {RS232Out.write(PictureModeDynamic);}
-  if(message == "PictureModeUser1") {RS232Out.write(PictureModeUser1);}
-  if(message == "PictureModeUser2") {RS232Out.write(PictureModeUser2);}
-  if(message == "VerticalStretchOff") {RS232Out.write(VerticalStretchOff);}
-  if(message == "VerticalStretchOn") {RS232Out.write(VerticalStretchOn);}
-  if(message == "Aspect169") {RS232Out.write(Aspect169);}
-  if(message == "Aspect43") {RS232Out.write(Aspect43);}
-  if(message == "AspectZoom") {RS232Out.write(AspectZoom);}
-  if(message == "Aspectcyclesthroughallavailablemodes") {RS232Out.write(Aspectcyclesthroughallavailablemodes);}
-  if(message == "BackStepsbackwardsthroughmenusandremovesanyOSDmessages") {RS232Out.write(BackStepsbackwardsthroughmenusandremovesanyOSDmessages);}
-  if(message == "BNRBlockNoiseReductionOff") {RS232Out.write(BNRBlockNoiseReductionOff);}
-  if(message == "BNRBlockNoiseReductionOn") {RS232Out.write(BNRBlockNoiseReductionOn);}
-  if(message == "BrightnessMin") {RS232Out.write(BrightnessMin);}
-  if(message == "BrightnessPlus") {RS232Out.write(BrightnessPlus);}
-  if(message == "BrightnessAdjAdjustmentBarOnOfftoggle") {RS232Out.write(BrightnessAdjAdjustmentBarOnOfftoggle);}
-  if(message == "CECOff") {RS232Out.write(CECOff);}
-  if(message == "CECOn") {RS232Out.write(CECOn);}
-  if(message == "ColourMin") {RS232Out.write(ColourMin);}
-  if(message == "ColourPlus") {RS232Out.write(ColourPlus);}
-  if(message == "ColourAdjAdjustmentBarOnOfftoggle") {RS232Out.write(ColourAdjAdjustmentBarOnOfftoggle);}
-  if(message == "ColourTemp5800K") {RS232Out.write(ColourTemp5800K);}
-  if(message == "ColourTemp6500K") {RS232Out.write(ColourTemp6500K);}
-  if(message == "ColourTemp7500K") {RS232Out.write(ColourTemp7500K);}
-  if(message == "ColourTemp9300K") {RS232Out.write(ColourTemp9300K);}
-  if(message == "ColourTempCustom1") {RS232Out.write(ColourTempCustom1);}
-  if(message == "ColourTempCustom2") {RS232Out.write(ColourTempCustom2);}
-  if(message == "ColourTempCustom3") {RS232Out.write(ColourTempCustom3);}
-  if(message == "ColourTempHighBright") {RS232Out.write(ColourTempHighBright);}
-  if(message == "ColourTempcyclesthroughalloptions") {RS232Out.write(ColourTempcyclesthroughalloptions);}
-  if(message == "ContrastMin") {RS232Out.write(ContrastMin);}
-  if(message == "ContrastPlus") {RS232Out.write(ContrastPlus);}
-  if(message == "ContrastAdjAdjustmentBarOnOfftoggle") {RS232Out.write(ContrastAdjAdjustmentBarOnOfftoggle);}
-  if(message == "CTIColourTransientImprovementOff") {RS232Out.write(CTIColourTransientImprovementOff);}
-  if(message == "CTIColourTransientImprovementLow") {RS232Out.write(CTIColourTransientImprovementLow);}
-  if(message == "CTIColourTransientImprovementMiddle") {RS232Out.write(CTIColourTransientImprovementMiddle);}
-  if(message == "CTIColourTransientimprovementHigh") {RS232Out.write(CTIColourTransientimprovementHigh);}
-  if(message == "CursorDown") {RS232Out.write(CursorDown);}
-  if(message == "CursorLeft") {RS232Out.write(CursorLeft);}
-  if(message == "CursorRight") {RS232Out.write(CursorRight);}
-  if(message == "CursorUp") {RS232Out.write(CursorUp);}
-  if(message == "DetailEnhanceMin") {RS232Out.write(DetailEnhanceMin);}
-  if(message == "DetailEnhancePlus") {RS232Out.write(DetailEnhancePlus);}
-  if(message == "Gammacyclesthroughalloptions") {RS232Out.write(Gammacyclesthroughalloptions);}
-  if(message == "HideOnOfftoggle") {RS232Out.write(HideOnOfftoggle);}
-  if(message == "InformationdisplaysInformationtabofmenu") {RS232Out.write(InformationdisplaysInformationtabofmenu);}
-  if(message == "Inputcyclesthroughallavailableinputs") {RS232Out.write(Inputcyclesthroughallavailableinputs);}
-  if(message == "KeystoneCorrectionHorizontalMin") {RS232Out.write(KeystoneCorrectionHorizontalMin);}
-  if(message == "KeystoneCorrectionHorizontalPlus") {RS232Out.write(KeystoneCorrectionHorizontalPlus);}
-  if(message == "KeystoneCorrectionVerticalMin") {RS232Out.write(KeystoneCorrectionVerticalMin);}
-  if(message == "KeystoneCorrectionVerticalPlus") {RS232Out.write(KeystoneCorrectionVerticalPlus);}
-  if(message == "LensAperture1") {RS232Out.write(LensAperture1);}
-  if(message == "LensAperture2") {RS232Out.write(LensAperture2);}
-  if(message == "LensAperture3") {RS232Out.write(LensAperture3);}
-  if(message == "LensApertureAdj") {RS232Out.write(LensApertureAdj);}
-  if(message == "LensControlcyclesthroughalloptions") {RS232Out.write(LensControlcyclesthroughalloptions);}
-  if(message == "LensFocusMin") {RS232Out.write(LensFocusMin);}
-  if(message == "LensFocusPlus") {RS232Out.write(LensFocusPlus);}
-  if(message == "LensShiftDown") {RS232Out.write(LensShiftDown);}
-  if(message == "LensShiftLeft") {RS232Out.write(LensShiftLeft);}
-  if(message == "LensShiftRight") {RS232Out.write(LensShiftRight);}
-  if(message == "LensShiftUp") {RS232Out.write(LensShiftUp);}
-  if(message == "LensZooPlus") {RS232Out.write(LensZooPlus);}
-  if(message == "LensZoomOut") {RS232Out.write(LensZoomOut);}
-  if(message == "MenuOnOfftoggle") {RS232Out.write(MenuOnOfftoggle);}
-  if(message == "MNRMosquitoNoiseReductionMin") {RS232Out.write(MNRMosquitoNoiseReductionMin);}
-  if(message == "MNRMosquitoNoiseReductionPlus") {RS232Out.write(MNRMosquitoNoiseReductionPlus);}
-  if(message == "NRtogglesdisplayofRNRMNR") {RS232Out.write(NRtogglesdisplayofRNRMNR);}
-  if(message == "OKtoacceptcurrentlyselectedoption") {RS232Out.write(OKtoacceptcurrentlyselectedoption);}
-  if(message == "PowerOffsendtwicewithshortdelaybetweentoswitchoff") {RS232Out.write(PowerOffsendtwicewithshortdelaybetweentoswitchoff);}
-  if(message == "RNRRandomNoiseReductionMin") {RS232Out.write(RNRRandomNoiseReductionMin);}
-  if(message == "RNRRandomNoiseReductionPlus") {RS232Out.write(RNRRandomNoiseReductionPlus);}
-  if(message == "SharpnessMin") {RS232Out.write(SharpnessMin);}
-  if(message == "SharpnessPlus") {RS232Out.write(SharpnessPlus);}
-  if(message == "SharpnessAdj") {RS232Out.write(SharpnessAdj);}
-  if(message == "TestPatterncyclesthroughallpatterns") {RS232Out.write(TestPatterncyclesthroughallpatterns);}
- 
+  if(message == "PowerOff") {RS232Out.write(PowerOff); client.publish("projector/state", "Command PowerOff executed");}
+  else if(message == "PowerOn") {RS232Out.write(PowerOn); client.publish("projector/state", "Command PowerOn executed");}
+  else if(message == "InputHDMI1") {RS232Out.write(InputHDMI1); client.publish("projector/state", "Command InputHDMI1 executed");}
+  else if(message == "InputHDMI2") {RS232Out.write(InputHDMI2); client.publish("projector/state", "Command InputHDMI2 executed");}
+  else if(message == "InputComponent") {RS232Out.write(InputComponent); client.publish("projector/state", "Command InputComponent executed");}
+  else if(message == "InputSVideo") {RS232Out.write(InputSVideo); client.publish("projector/state", "Command InputSVideo executed");}
+  else if(message == "InputVideo") {RS232Out.write(InputVideo); client.publish("projector/state", "Command InputVideo executed");}
+  else if(message == "Inputplus") {RS232Out.write(Inputplus); client.publish("projector/state", "Command Inputplus executed");}
+  else if(message == "Inputmin") {RS232Out.write(Inputmin); client.publish("projector/state", "Command Inputmin executed");}
+  else if(message == "TestPatternOff") {RS232Out.write(TestPatternOff); client.publish("projector/state", "Command TestPatternOff executed");}
+  else if(message == "TestPatternColourBars") {RS232Out.write(TestPatternColourBars); client.publish("projector/state", "Command TestPatternColourBars executed");}
+  else if(message == "TestPatternStairstepblackandwhite") {RS232Out.write(TestPatternStairstepblackandwhite); client.publish("projector/state", "Command TestPatternStairstepblackandwhite executed");}
+  else if(message == "TestPatternStairstepred") {RS232Out.write(TestPatternStairstepred); client.publish("projector/state", "Command TestPatternStairstepred executed");}
+  else if(message == "TestPatternStairstepgreen") {RS232Out.write(TestPatternStairstepgreen); client.publish("projector/state", "Command TestPatternStairstepgreen executed");}
+  else if(message == "TestPatternStairstepblue") {RS232Out.write(TestPatternStairstepblue); client.publish("projector/state", "Command TestPatternStairstepblue executed");}
+  else if(message == "TestPatternCrosshatchgreen") {RS232Out.write(TestPatternCrosshatchgreen); client.publish("projector/state", "Command TestPatternCrosshatchgreen executed");}
+  else if(message == "GammaNormal") {RS232Out.write(GammaNormal); client.publish("projector/state", "Command GammaNormal executed");}
+  else if(message == "GammaA") {RS232Out.write(GammaA); client.publish("projector/state", "Command GammaA executed");}
+  else if(message == "GammaB") {RS232Out.write(GammaB); client.publish("projector/state", "Command GammaB executed");}
+  else if(message == "GammaC") {RS232Out.write(GammaC); client.publish("projector/state", "Command GammaC executed");}
+  else if(message == "GammaCustom1") {RS232Out.write(GammaCustom1); client.publish("projector/state", "Command GammaCustom1 executed");}
+  else if(message == "GammaCustom2") {RS232Out.write(GammaCustom2); client.publish("projector/state", "Command GammaCustom2 executed");}
+  else if(message == "GammaCustom3") {RS232Out.write(GammaCustom3); client.publish("projector/state", "Command GammaCustom3 executed");}
+  else if(message == "GammaCorrectionValue18") {RS232Out.write(GammaCorrectionValue18); client.publish("projector/state", "Command GammaCorrectionValue18 executed");}
+  else if(message == "GammaCorrectionValue19") {RS232Out.write(GammaCorrectionValue19); client.publish("projector/state", "Command GammaCorrectionValue19 executed");}
+  else if(message == "GammaCorrectionValue20") {RS232Out.write(GammaCorrectionValue20); client.publish("projector/state", "Command GammaCorrectionValue20 executed");}
+  else if(message == "GammaCorrectionValue21") {RS232Out.write(GammaCorrectionValue21); client.publish("projector/state", "Command GammaCorrectionValue21 executed");}
+  else if(message == "GammaCorrectionValue22Default") {RS232Out.write(GammaCorrectionValue22Default); client.publish("projector/state", "Command GammaCorrectionValue22Default executed");}
+  else if(message == "GammaCorrectionValue23") {RS232Out.write(GammaCorrectionValue23); client.publish("projector/state", "Command GammaCorrectionValue23 executed");}
+  else if(message == "GammaCorrectionValue24") {RS232Out.write(GammaCorrectionValue24); client.publish("projector/state", "Command GammaCorrectionValue24 executed");}
+  else if(message == "GammaCorrectionValue25") {RS232Out.write(GammaCorrectionValue25); client.publish("projector/state", "Command GammaCorrectionValue25 executed");}
+  else if(message == "GammaCorrectionValue26") {RS232Out.write(GammaCorrectionValue26); client.publish("projector/state", "Command GammaCorrectionValue26 executed");}
+  else if(message == "PictureModeCinema1") {RS232Out.write(PictureModeCinema1); client.publish("projector/state", "Command PictureModeCinema1 executed");}
+  else if(message == "PictureModeCinema2") {RS232Out.write(PictureModeCinema2); client.publish("projector/state", "Command PictureModeCinema2 executed");}
+  else if(message == "PictureModeCinema3") {RS232Out.write(PictureModeCinema3); client.publish("projector/state", "Command PictureModeCinema3 executed");}
+  else if(message == "PictureModeNatural") {RS232Out.write(PictureModeNatural); client.publish("projector/state", "Command PictureModeNatural executed");}
+  else if(message == "PictureModeStage") {RS232Out.write(PictureModeStage); client.publish("projector/state", "Command PictureModeStage executed");}
+  else if(message == "PictureModeDynamic") {RS232Out.write(PictureModeDynamic); client.publish("projector/state", "Command PictureModeDynamic executed");}
+  else if(message == "PictureModeUser1") {RS232Out.write(PictureModeUser1); client.publish("projector/state", "Command PictureModeUser1 executed");}
+  else if(message == "PictureModeUser2") {RS232Out.write(PictureModeUser2); client.publish("projector/state", "Command PictureModeUser2 executed");}
+  else if(message == "VerticalStretchOff") {RS232Out.write(VerticalStretchOff); client.publish("projector/state", "Command VerticalStretchOff executed");}
+  else if(message == "VerticalStretchOn") {RS232Out.write(VerticalStretchOn); client.publish("projector/state", "Command VerticalStretchOn executed");}
+  else if(message == "Aspect169") {RS232Out.write(Aspect169); client.publish("projector/state", "Command Aspect169 executed");}
+  else if(message == "Aspect43") {RS232Out.write(Aspect43); client.publish("projector/state", "Command Aspect43 executed");}
+  else if(message == "AspectZoom") {RS232Out.write(AspectZoom); client.publish("projector/state", "Command AspectZoom executed");}
+  else if(message == "Aspectcyclesthroughallavailablemodes") {RS232Out.write(Aspectcyclesthroughallavailablemodes); client.publish("projector/state", "Command Aspectcyclesthroughallavailablemodes executed");}
+  else if(message == "BackStepsbackwardsthroughmenusandremovesanyOSDmessages") {RS232Out.write(BackStepsbackwardsthroughmenusandremovesanyOSDmessages); client.publish("projector/state", "Command BackStepsbackwardsthroughmenusandremovesanyOSDmessages executed");}
+  else if(message == "BNRBlockNoiseReductionOff") {RS232Out.write(BNRBlockNoiseReductionOff); client.publish("projector/state", "Command BNRBlockNoiseReductionOff executed");}
+  else if(message == "BNRBlockNoiseReductionOn") {RS232Out.write(BNRBlockNoiseReductionOn); client.publish("projector/state", "Command BNRBlockNoiseReductionOn executed");}
+  else if(message == "BrightnessMin") {RS232Out.write(BrightnessMin); client.publish("projector/state", "Command BrightnessMin executed");}
+  else if(message == "BrightnessPlus") {RS232Out.write(BrightnessPlus); client.publish("projector/state", "Command BrightnessPlus executed");}
+  else if(message == "BrightnessAdjAdjustmentBarOnOfftoggle") {RS232Out.write(BrightnessAdjAdjustmentBarOnOfftoggle); client.publish("projector/state", "Command BrightnessAdjAdjustmentBarOnOfftoggle executed");}
+  else if(message == "CECOff") {RS232Out.write(CECOff); client.publish("projector/state", "Command CECOff executed");}
+  else if(message == "CECOn") {RS232Out.write(CECOn); client.publish("projector/state", "Command CECOn executed");}
+  else if(message == "ColourMin") {RS232Out.write(ColourMin); client.publish("projector/state", "Command ColourMin executed");}
+  else if(message == "ColourPlus") {RS232Out.write(ColourPlus); client.publish("projector/state", "Command ColourPlus executed");}
+  else if(message == "ColourAdjAdjustmentBarOnOfftoggle") {RS232Out.write(ColourAdjAdjustmentBarOnOfftoggle); client.publish("projector/state", "Command ColourAdjAdjustmentBarOnOfftoggle executed");}
+  else if(message == "ColourTemp5800K") {RS232Out.write(ColourTemp5800K); client.publish("projector/state", "Command ColourTemp5800K executed");}
+  else if(message == "ColourTemp6500K") {RS232Out.write(ColourTemp6500K); client.publish("projector/state", "Command ColourTemp6500K executed");}
+  else if(message == "ColourTemp7500K") {RS232Out.write(ColourTemp7500K); client.publish("projector/state", "Command ColourTemp7500K executed");}
+  else if(message == "ColourTemp9300K") {RS232Out.write(ColourTemp9300K); client.publish("projector/state", "Command ColourTemp9300K executed");}
+  else if(message == "ColourTempCustom1") {RS232Out.write(ColourTempCustom1); client.publish("projector/state", "Command ColourTempCustom1 executed");}
+  else if(message == "ColourTempCustom2") {RS232Out.write(ColourTempCustom2); client.publish("projector/state", "Command ColourTempCustom2 executed");}
+  else if(message == "ColourTempCustom3") {RS232Out.write(ColourTempCustom3); client.publish("projector/state", "Command ColourTempCustom3 executed");}
+  else if(message == "ColourTempHighBright") {RS232Out.write(ColourTempHighBright); client.publish("projector/state", "Command ColourTempHighBright executed");}
+  else if(message == "ColourTempcyclesthroughalloptions") {RS232Out.write(ColourTempcyclesthroughalloptions); client.publish("projector/state", "Command ColourTempcyclesthroughalloptions executed");}
+  else if(message == "ContrastMin") {RS232Out.write(ContrastMin); client.publish("projector/state", "Command ContrastMin executed");}
+  else if(message == "ContrastPlus") {RS232Out.write(ContrastPlus); client.publish("projector/state", "Command ContrastPlus executed");}
+  else if(message == "ContrastAdjAdjustmentBarOnOfftoggle") {RS232Out.write(ContrastAdjAdjustmentBarOnOfftoggle); client.publish("projector/state", "Command ContrastAdjAdjustmentBarOnOfftoggle executed");}
+  else if(message == "CTIColourTransientImprovementOff") {RS232Out.write(CTIColourTransientImprovementOff); client.publish("projector/state", "Command CTIColourTransientImprovementOff executed");}
+  else if(message == "CTIColourTransientImprovementLow") {RS232Out.write(CTIColourTransientImprovementLow); client.publish("projector/state", "Command CTIColourTransientImprovementLow executed");}
+  else if(message == "CTIColourTransientImprovementMiddle") {RS232Out.write(CTIColourTransientImprovementMiddle); client.publish("projector/state", "Command CTIColourTransientImprovementMiddle executed");}
+  else if(message == "CTIColourTransientimprovementHigh") {RS232Out.write(CTIColourTransientimprovementHigh); client.publish("projector/state", "Command CTIColourTransientimprovementHigh executed");}
+  else if(message == "CursorDown") {RS232Out.write(CursorDown); client.publish("projector/state", "Command CursorDown executed");}
+  else if(message == "CursorLeft") {RS232Out.write(CursorLeft); client.publish("projector/state", "Command CursorLeft executed");}
+  else if(message == "CursorRight") {RS232Out.write(CursorRight); client.publish("projector/state", "Command CursorRight executed");}
+  else if(message == "CursorUp") {RS232Out.write(CursorUp); client.publish("projector/state", "Command CursorUp executed");}
+  else if(message == "DetailEnhanceMin") {RS232Out.write(DetailEnhanceMin); client.publish("projector/state", "Command DetailEnhanceMin executed");}
+  else if(message == "DetailEnhancePlus") {RS232Out.write(DetailEnhancePlus); client.publish("projector/state", "Command DetailEnhancePlus executed");}
+  else if(message == "Gammacyclesthroughalloptions") {RS232Out.write(Gammacyclesthroughalloptions); client.publish("projector/state", "Command Gammacyclesthroughalloptions executed");}
+  else if(message == "HideOnOfftoggle") {RS232Out.write(HideOnOfftoggle); client.publish("projector/state", "Command HideOnOfftoggle executed");}
+  else if(message == "InformationdisplaysInformationtabofmenu") {RS232Out.write(InformationdisplaysInformationtabofmenu); client.publish("projector/state", "Command InformationdisplaysInformationtabofmenu executed");}
+  else if(message == "Inputcyclesthroughallavailableinputs") {RS232Out.write(Inputcyclesthroughallavailableinputs); client.publish("projector/state", "Command Inputcyclesthroughallavailableinputs executed");}
+  else if(message == "KeystoneCorrectionHorizontalMin") {RS232Out.write(KeystoneCorrectionHorizontalMin); client.publish("projector/state", "Command KeystoneCorrectionHorizontalMin executed");}
+  else if(message == "KeystoneCorrectionHorizontalPlus") {RS232Out.write(KeystoneCorrectionHorizontalPlus); client.publish("projector/state", "Command KeystoneCorrectionHorizontalPlus executed");}
+  else if(message == "KeystoneCorrectionVerticalMin") {RS232Out.write(KeystoneCorrectionVerticalMin); client.publish("projector/state", "Command KeystoneCorrectionVerticalMin executed");}
+  else if(message == "KeystoneCorrectionVerticalPlus") {RS232Out.write(KeystoneCorrectionVerticalPlus); client.publish("projector/state", "Command KeystoneCorrectionVerticalPlus executed");}
+  else if(message == "LensAperture1") {RS232Out.write(LensAperture1); client.publish("projector/state", "Command LensAperture1 executed");}
+  else if(message == "LensAperture2") {RS232Out.write(LensAperture2); client.publish("projector/state", "Command LensAperture2 executed");}
+  else if(message == "LensAperture3") {RS232Out.write(LensAperture3); client.publish("projector/state", "Command LensAperture3 executed");}
+  else if(message == "LensApertureAdj") {RS232Out.write(LensApertureAdj); client.publish("projector/state", "Command LensApertureAdj executed");}
+  else if(message == "LensControlcyclesthroughalloptions") {RS232Out.write(LensControlcyclesthroughalloptions); client.publish("projector/state", "Command LensControlcyclesthroughalloptions executed");}
+  else if(message == "LensFocusMin") {RS232Out.write(LensFocusMin); client.publish("projector/state", "Command LensFocusMin executed");}
+  else if(message == "LensFocusPlus") {RS232Out.write(LensFocusPlus); client.publish("projector/state", "Command LensFocusPlus executed");}
+  else if(message == "LensShiftDown") {RS232Out.write(LensShiftDown); client.publish("projector/state", "Command LensShiftDown executed");}
+  else if(message == "LensShiftLeft") {RS232Out.write(LensShiftLeft); client.publish("projector/state", "Command LensShiftLeft executed");}
+  else if(message == "LensShiftRight") {RS232Out.write(LensShiftRight); client.publish("projector/state", "Command LensShiftRight executed");}
+  else if(message == "LensShiftUp") {RS232Out.write(LensShiftUp); client.publish("projector/state", "Command LensShiftUp executed");}
+  else if(message == "LensZooPlus") {RS232Out.write(LensZooPlus); client.publish("projector/state", "Command LensZooPlus executed");}
+  else if(message == "LensZoomOut") {RS232Out.write(LensZoomOut); client.publish("projector/state", "Command LensZoomOut executed");}
+  else if(message == "MenuOnOfftoggle") {RS232Out.write(MenuOnOfftoggle); client.publish("projector/state", "Command MenuOnOfftoggle executed");}
+  else if(message == "MNRMosquitoNoiseReductionMin") {RS232Out.write(MNRMosquitoNoiseReductionMin); client.publish("projector/state", "Command MNRMosquitoNoiseReductionMin executed");}
+  else if(message == "MNRMosquitoNoiseReductionPlus") {RS232Out.write(MNRMosquitoNoiseReductionPlus); client.publish("projector/state", "Command MNRMosquitoNoiseReductionPlus executed");}
+  else if(message == "NRtogglesdisplayofRNRMNR") {RS232Out.write(NRtogglesdisplayofRNRMNR); client.publish("projector/state", "Command NRtogglesdisplayofRNRMNR executed");}
+  else if(message == "OKtoacceptcurrentlyselectedoption") {RS232Out.write(OKtoacceptcurrentlyselectedoption); client.publish("projector/state", "Command OKtoacceptcurrentlyselectedoption executed");}
+  else if(message == "PowerOffsendtwicewithshortdelaybetweentoswitchoff") {RS232Out.write(PowerOffsendtwicewithshortdelaybetweentoswitchoff); client.publish("projector/state", "Command PowerOffsendtwicewithshortdelaybetweentoswitchoff executed");}
+  else if(message == "RNRRandomNoiseReductionMin") {RS232Out.write(RNRRandomNoiseReductionMin); client.publish("projector/state", "Command RNRRandomNoiseReductionMin executed");}
+  else if(message == "RNRRandomNoiseReductionPlus") {RS232Out.write(RNRRandomNoiseReductionPlus); client.publish("projector/state", "Command RNRRandomNoiseReductionPlus executed");}
+  else if(message == "SharpnessMin") {RS232Out.write(SharpnessMin); client.publish("projector/state", "Command SharpnessMin executed");}
+  else if(message == "SharpnessPlus") {RS232Out.write(SharpnessPlus); client.publish("projector/state", "Command SharpnessPlus executed");}
+  else if(message == "SharpnessAdj") {RS232Out.write(SharpnessAdj); client.publish("projector/state", "Command SharpnessAdj executed");}
+  else if(message == "TestPatterncyclesthroughallpatterns") {RS232Out.write(TestPatterncyclesthroughallpatterns); client.publish("projector/state", "Command TestPatterncyclesthroughallpatterns executed");}
+  else {}
   Serial.println();
   Serial.println("-----------------------");  
 }
